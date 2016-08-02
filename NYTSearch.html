@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NY Times Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="NYTS.css">
+ </head>
+
+<body> 
+
+<div class="jumbotron text-center" style="background-color: #20315A ; color: white;"><h1><i class="glyphicon glyphicon-list-alt"></i> New York Times Search</h1></div>
+<div class="panel panel-primary questions">
+  <div class="panel-heading">
+    <h3 class="panel-title">Search Parameters</h3>
+  </div>
+  <div class="panel-body">
+<form>
+  Search Terms:<br>
+  <input type="text" size="120" class="terms"><br>
+  Number of Records to Retrieve:<br>
+  <input type="text" size="120" class="records"><br><br>
+   Start Year(Optional) <br>
+  <input type="text" size="120" class="startDate"><br><br>
+    End Year (Optional)<br>
+  <input type="text" size="120" class="endDate"><br><br>
+  <input type="submit" value="Submit" class="submit">
+</form>
+</div>
+</div>
+
+<div class="panel panel-primary questions">
+  <div class="panel-heading">
+    <h3 class="panel-title">Results</h3>
+  </div>
+  <div class="panel-body" id="results">
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="NYTSapp.js"></script>
+
+
+</body>
+</html>
