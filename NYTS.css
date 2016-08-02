@@ -2,3 +2,11 @@
 	width: 70%;
 	margin-left: 15%;
 }
+
+.article {
+    display: block;
+    margin: 15px 0;
+    padding: 15px;
+    background: lavender;
+    border: 2px solid black;
+}

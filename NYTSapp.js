@@ -5,9 +5,12 @@ var APIKEY = "0091c0edc80b46b8aab02776ae068c61";
 $('.submit').on('click', function() {
     userQuery = $(".terms").val();
     recordsLimit = $(".records").val();
+    console.log(recordsLimit);
     beginYear = $(".startDate").val();
     endYear = $(".endDate").val();
-    
+
+    $("#results").empty();
+
     url = url + '?' 
 	  + 'api-key=' + APIKEY
 	  + '&' +'q=' + userQuery;
@@ -57,14 +60,17 @@ $('.submit').on('click', function() {
 	  	}
 
 	  	//Build HTML for FrontEnd
-	  	var articleDiv = $("<div>");
+	  	var articleDiv = $("<div>").addClass("article");
 
-
-	  	articleDiv.append($("<p>").text(title));
-	  	articleDiv.append($("<p>").text(author));
-	  	articleDiv.append($("<p>").text(section));
-	  	articleDiv.append($("<p>").text(publishDate));
-	  	articleDiv.append($("<a href='" + articleLink + "'>" + articleLink + "</a>"));
+	  	articleDiv.append($("<p>").text(i+1).addClass("resultNumber"));
+	  	articleDiv.append($("<p>").text(title).addClass("title"));
+	  	articleDiv.append($("<p>").text(author).addClass("author"));
+	  	articleDiv.append($("<p>").text(section).addClass("section"));
+	  	articleDiv.append($("<p>").text(publishDate).addClass("publishDate"));
+	  	articleDiv.append(
+	  		$("<a href='" + articleLink + "'>" + articleLink + "</a>")
+	  		.addClass("articleLink")
+	  	);
 
 
 	  	$("#results").append(articleDiv);
